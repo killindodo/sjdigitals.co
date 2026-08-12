@@ -29,7 +29,6 @@
     --transition: all 0.3s ease;
 }
 
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -54,7 +53,6 @@ body {
     padding: 0 var(--spacing-md);
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 600;
@@ -89,7 +87,6 @@ a:hover {
     color: var(--gold);
 }
 
-/* Navigation */
 .navbar {
     position: sticky;
     top: 0;
@@ -135,7 +132,6 @@ a:hover {
     color: var(--gold);
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-white) 0%, var(--off-white) 100%);
     padding: var(--spacing-xxl) var(--spacing-md);
@@ -185,13 +181,11 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* Section Headers */
 .section-header {
     text-align: center;
     margin-bottom: var(--spacing-xxl);
-    padding-left: var(--spacing-md);
-    border-left: 4px solid var(--gold);
     padding-left: var(--spacing-lg);
+    border-left: 4px solid var(--gold);
 }
 
 .section-header h2 {
@@ -203,7 +197,6 @@ a:hover {
     color: var(--text-gray);
 }
 
-/* Services Section */
 .services {
     padding: var(--spacing-xxl) var(--spacing-md);
     background: var(--primary-white);
@@ -321,7 +314,6 @@ a:hover {
     color: var(--text-dark);
 }
 
-/* Portfolio Section */
 .portfolio {
     padding: var(--spacing-xxl) var(--spacing-md);
     background: var(--off-white);
@@ -378,7 +370,6 @@ a:hover {
     text-align: center;
 }
 
-/* About Section */
 .about {
     padding: var(--spacing-xxl) var(--spacing-md);
     background: var(--primary-white);
@@ -420,7 +411,6 @@ a:hover {
     font-size: 0.95rem;
 }
 
-/* Contact Section */
 .contact {
     padding: var(--spacing-xxl) var(--spacing-md);
     background: var(--off-white);
@@ -490,7 +480,6 @@ a:hover {
     line-height: 1.6;
 }
 
-/* Footer */
 .footer {
     background: var(--text-dark);
     color: var(--primary-white);
@@ -539,7 +528,6 @@ a:hover {
     font-size: 0.85rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .logo {
         font-size: 1.25rem;
@@ -639,20 +627,6 @@ a:hover {
     }
 }
 
-/* Utility Classes */
-.text-center {
-    text-align: center;
-}
-
-.text-gold {
-    color: var(--gold);
-}
-
-.bg-light {
-    background: var(--off-white);
-}
-
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -662,14 +636,12 @@ a:hover {
     }
 }
 
-/* Focus States */
 button:focus,
 a:focus {
     outline: 2px solid var(--gold);
     outline-offset: 2px;
 }
 
-/* Print Styles */
 @media print {
     .navbar,
     .contact,
