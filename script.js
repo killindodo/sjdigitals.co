@@ -1,18 +1,9 @@
-/**
- * SJ Digitals Co. - Main JavaScript
- * Smooth navigation, form tracking, and analytics
- */
-
-// Document ready
 document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initGAEvents();
     initFormTracking();
 });
 
-// ==========================================
-// Navigation & Smooth Scrolling
-// ==========================================
 function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-links a, .cta-btn, .card-cta');
     
@@ -20,7 +11,6 @@ function initNavigation() {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            // Only prevent default for hash links
             if (href && href.startsWith('#')) {
                 e.preventDefault();
                 const targetId = href.substring(1);
@@ -28,8 +18,6 @@ function initNavigation() {
                 
                 if (targetElement) {
                     targetElement.scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Update active nav state
                     updateActiveNav(targetId);
                 }
             }
@@ -49,11 +37,7 @@ function updateActiveNav(currentId) {
     });
 }
 
-// ==========================================
-// Google Analytics 4 Event Tracking
-// ==========================================
 function initGAEvents() {
-    // Track CTA button clicks
     const ctaBtns = document.querySelectorAll('.cta-btn, .card-cta');
     ctaBtns.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -65,7 +49,6 @@ function initGAEvents() {
         });
     });
 
-    // Track section views (when scrolled into view)
     const sections = document.querySelectorAll('section[id]');
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -75,7 +58,6 @@ function initGAEvents() {
                     'section_name': entry.target.id,
                     'timestamp': new Date().toISOString()
                 });
-                // Stop observing this section after first view
                 sectionObserver.unobserve(entry.target);
             }
         });
@@ -85,7 +67,6 @@ function initGAEvents() {
         sectionObserver.observe(section);
     });
 
-    // Track external link clicks
     const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="tel:"], a[href^="mailto:"], a[href^="https://wa.me"]');
     externalLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -103,28 +84,7 @@ function initGAEvents() {
     });
 }
 
-// ==========================================
-// Form Tracking
-// ==========================================
 function initFormTracking() {
-    // Get the embedded Google Form iframe
-    const googleFormIframe = document.querySelector('.contact-form-area iframe');
-    
-    if (googleFormIframe) {
-        // Track when user focuses on form (engagement indicator)
-        googleFormIframe.addEventListener('focus', function() {
-            gtag('event', 'form_focus', {
-                'event_category': 'engagement',
-                'event_label': 'inquiry_form'
-            });
-        });
-
-        // Note: Google Forms within iframes have limited tracking ability
-        // Manual submission tracking would need to be done via form's own submission handler
-        // or by monitoring form completion via Google Forms' built-in tracking
-    }
-
-    // Track "Get Quote" button clicks specifically
     const quoteButtons = document.querySelectorAll('.card-cta');
     quoteButtons.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -137,9 +97,6 @@ function initFormTracking() {
     });
 }
 
-// ==========================================
-// Scroll Effects (Optional - Subtle Animations)
-// ==========================================
 function initScrollEffects() {
     const cards = document.querySelectorAll('.service-card, .portfolio-item, .feature');
     
@@ -160,24 +117,10 @@ function initScrollEffects() {
     });
 }
 
-// ==========================================
-// Initialize Scroll Effects on Page Load
-// ==========================================
 window.addEventListener('load', function() {
     initScrollEffects();
 });
 
-// ==========================================
-// Mobile Menu Toggle (Future Enhancement)
-// ==========================================
-function initMobileMenu() {
-    // Add mobile menu functionality if needed in future
-    // This is a placeholder for mobile navigation enhancement
-}
-
-// ==========================================
-// Utility: Log Page Performance (Optional)
-// ==========================================
 function logPagePerformance() {
     if (window.performance && window.performance.timing) {
         const perfData = window.performance.timing;
@@ -186,28 +129,11 @@ function logPagePerformance() {
         gtag('event', 'page_load_time', {
             'event_category': 'performance',
             'load_time_ms': pageLoadTime,
-            'value': Math.round(pageLoadTime / 1000) // Convert to seconds for easier reading
+            'value': Math.round(pageLoadTime / 1000)
         });
     }
 }
 
-// Log page performance on load
 window.addEventListener('load', logPagePerformance);
-
-// ==========================================
-// Contact Button Analytics
-// ==========================================
-window.addEventListener('scroll', function() {
-    const contactSection = document.getElementById('contact');
-    const rect = contactSection.getBoundingClientRect();
-    
-    // Track when user reaches contact section
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        gtag('event', 'reached_contact_section', {
-            'event_category': 'engagement',
-            'value': 1
-        });
-    }
-});
 
 console.log('SJ Digitals Co. - Website Loaded Successfully');
