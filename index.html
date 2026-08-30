@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SJ Digitals Co. - Your Digital Presence, Perfected</title>
-    <meta name="description" content="Logo design, business listings, Google Business Profile optimization, digital wedding invitations, and more. Elevate your digital presence with SJ Digitals Co.">
-    <meta name="keywords" content="logo design, business listing, Google Business Profile, digital wedding cards, visiting cards, social media design, digital services">
-    <meta property="og:title" content="SJ Digitals Co. - Your Digital Presence, Perfected">
-    <meta property="og:description" content="Professional digital services for small businesses">
+    <title>SJ Digitals Co. - Professional Digital Branding, Listings & Design Services</title>
+    <meta name="description" content="Elevate your brand with logo design, visiting cards, NFC smart cards, Google Business Profile optimization, business listings, digital wedding invites & WhatsApp catalogues. Based in Gaya, Bihar.">
+    <meta name="keywords" content="SJ Digitals Co, logo design, visiting card design, NFC smart card, Google Business Profile optimization, JustDial listing, IndiaMART listing, digital wedding invitation, WhatsApp catalogue, Gaya Bihar digital agency">
+    <meta name="author" content="SJ Digitals Co.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sjdigitals.netlify.app/">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sjdigitals.netlify.app/">
+    <meta property="og:title" content="SJ Digitals Co. - Your Digital Presence, Perfected">
+    <meta property="og:description" content="Professional digital branding, local SEO, smart NFC visiting cards, and creative designs tailored for small businesses.">
+    <meta property="og:image" content="https://sjdigitals.netlify.app/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SJ Digitals Co. - Your Digital Presence, Perfected">
+    <meta name="twitter:description" content="High-impact digital services: Logos, NFC cards, Google Business Setup & more. Get instant quotes!">
+
+    <!-- Favicon (High-res SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23111827'/><path d='M25 65 C25 45 45 45 45 35 C45 27 37 25 30 28 M48 25 L65 25 L65 58 C65 72 48 74 38 68' stroke='%23C59B27' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='65' cy='32' r='4.5' fill='%23E5C158'/></svg>">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -24,32 +39,181 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-MDH1P42PZZ'); // Replace with your GA4 Measurement ID
+        gtag('config', 'G-MDH1P42PZZ');
+    </script>
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "SJ Digitals Co.",
+        "legalName": "Surya Jyoti Enterprises",
+        "url": "https://sjdigitals.netlify.app",
+        "logo": "https://sjdigitals.netlify.app/logo.png",
+        "description": "Professional digital services including Logo Design, Visiting Cards, NFC Smart Cards, Google Business Profile SEO, WhatsApp Catalogues, and Local Listings.",
+        "telephone": "+917004185301",
+        "email": "suryapratapsingh420786@gmail.com",
+        "priceRange": "₹499 - ₹15000",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gaya",
+            "addressRegion": "Bihar",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 24.7955,
+            "longitude": 85.0002
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "09:00",
+                "closes": "21:00"
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Branding & Marketing Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Logo Design",
+                        "description": "Custom vector logo design that represents your brand identity."
+                    },
+                    "price": "1500",
+                    "priceCurrency": "INR"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Google Business Profile Optimization",
+                        "description": "Local SEO & Google Maps listing setup to drive customer calls and foot traffic."
+                    },
+                    "price": "7000",
+                    "priceCurrency": "INR"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "NFC Digital Smart Card",
+                        "description": "Contactless tap-to-share business profile card."
+                    },
+                    "price": "699",
+                    "priceCurrency": "INR"
+                }
+            ]
+        }
+    }
+    </script>
+    <!-- Theme Initializer (Prevents Theme Flash) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('sj_theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
     </script>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="container">
-        <div class="navbar-brand">
-            <h1 class="logo">SJ Digitals Co.</h1>
+<!-- Navigation Bar -->
+<header class="navbar" id="navbar">
+    <div class="container navbar-container">
+        <a href="#home" class="navbar-brand" aria-label="SJ Digitals Co. Home">
+            <div class="logo-mark">SJ</div>
+            <div class="logo-text">
+                <span class="brand-title">SJ Digitals Co.</span>
+                <span class="brand-tagline">Surya Jyoti Enterprises</span>
+            </div>
+        </a>
+
+        <div class="nav-controls">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Switch between Dark and Light mode">
+                <span class="theme-icon-sun" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </span>
+                <span class="theme-icon-moon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </span>
+            </button>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-cta-wrapper">
+                <a href="#contact" class="btn btn-gold btn-sm">Get Free Quote</a>
+            </div>
+        </nav>
     </div>
-</nav>
+</header>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
-    <div class="container hero-content">
-        <h1 class="hero-title">Your Digital Presence,<br><span class="highlight">Perfected</span></h1>
-        <p class="hero-subtitle">Transform your business with professional digital services—logos, listings, cards, and online visibility that converts.</p>
-        <a href="#contact" class="cta-btn">Get Started</a>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Premium Digital & Branding Solutions</span>
+            </div>
+            <h1 class="hero-title">
+                Your Digital Presence, <br>
+                <span class="gradient-text">Flawlessly Perfected.</span>
+            </h1>
+            <p class="hero-subtitle">
+                We craft powerful brand identities, high-ranking Google Business Profiles, smart NFC cards, and creative assets designed to attract high-paying customers to your business.
+            </p>
+            
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn btn-gold btn-lg">
+                    <span>Get Free Quotation</span>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20am%20looking%20for%20digital%20branding%20and%20services." target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <span>Instant WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Custom Designs</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">24-48h</span>
+                    <span class="stat-label">Fast Delivery</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">5.0 ★</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -57,99 +221,238 @@
 <section id="services" class="services">
     <div class="container">
         <div class="section-header">
-            <h2>Our Services</h2>
-            <p class="section-subtitle">Professional digital solutions tailored to your business</p>
+            <span class="section-tag">What We Offer</span>
+            <h2>Complete Digital & Branding Solutions</h2>
+            <p class="section-subtitle">Affordable, industry-grade digital services designed to scale local and online businesses.</p>
         </div>
         
         <div class="services-grid">
-            <!-- Logo Design -->
-            <div class="service-card">
-                <div class="service-icon">🎨</div>
-                <h3>Logo Design</h3>
-                <p class="service-desc">Custom logo design that represents your brand identity.</p>
-                <p class="price">Starting from <strong>₹1,500</strong></p>
-                <a href="#contact" class="card-cta">Get Quote</a>
-            </div>
-
-            <!-- Visiting Card -->
-            <div class="service-card">
-                <div class="service-icon">🏷️</div>
-                <h3>Visiting Card Design</h3>
-                <p class="service-desc">Professional print-ready visiting card designs.</p>
-                <p class="price">Starting from <strong>₹500</strong></p>
-                <a href="#contact" class="card-cta">Get Quote</a>
-            </div>
-
-            <!-- NFC Visiting Card -->
-            <div class="service-card">
-                <div class="service-icon">📱</div>
-                <h3>NFC/Digital Visiting Card</h3>
-                <p class="service-desc">Interactive digital card with profile link—tap to share.</p>
-                <p class="price">Starting from <strong>₹699</strong></p>
-                <a href="#contact" class="card-cta">Get Quote</a>
-            </div>
-
-            <!-- Wedding Invitations -->
-            <div class="service-card">
-                <div class="service-icon">💐</div>
-                <h3>Digital Wedding Invitations</h3>
-                <p class="service-desc">Static to animated wedding cards—WhatsApp ready.</p>
-                <p class="price">Starting from <strong>₹599</strong></p>
-                <a href="#contact" class="card-cta">Get Quote</a>
-            </div>
-
-            <!-- Social Media Posters -->
-            <div class="service-card">
-                <div class="service-icon">📸</div>
-                <h3>Social Media Poster Design</h3>
-                <p class="service-desc">Eye-catching posts for Instagram, Facebook, and more.</p>
-                <p class="price">Starting from <strong>₹499</strong></p>
-                <a href="#contact" class="card-cta">Get Quote</a>
-            </div>
-
-            <!-- WhatsApp Catalogue -->
-            <div class="service-card">
-                <div class="service-icon">💬</div>
-                <h3>WhatsApp Business Catalogue</h3>
-                <p class="service-desc">Organize your products/services with an interactive catalog.</p>
-                <p class="price">Starting from <strong>₹999</strong></p>
-                <a href="#contact" class="card-cta">Get Quote</a>
-            </div>
-
-            <!-- Business Listing -->
-            <div class="service-card">
-                <div class="service-icon">📍</div>
-                <h3>Business Listing Setup</h3>
-                <p class="service-desc">Get listed on JustDial, IndiaMART, Sulekha, and more.</p>
-                <p class="price">Starting from <strong>₹999</strong></p>
-                <a href="#contact" class="card-cta">Get Quote</a>
-            </div>
-
-            <!-- QR Code Menu -->
-            <div class="service-card">
-                <div class="service-icon">🍽️</div>
-                <h3>QR Code Digital Menu</h3>
-                <p class="service-desc">Hosted menu page + printed QR—perfect for shops & restaurants.</p>
-                <p class="price">Starting from <strong>₹2,500</strong></p>
-                <a href="#contact" class="card-cta">Get Quote</a>
-            </div>
-
-            <!-- Google Business Profile -->
-            <div class="service-card featured">
-                <div class="service-icon">🏢</div>
-                <h3>Google Business Profile</h3>
-                <p class="service-desc">Optimize your profile for local search visibility.</p>
-                <div class="pricing-tiers">
-                    <p><strong>Setup:</strong> ₹7,000</p>
-                    <p><strong>Monthly:</strong> ₹1,000</p>
-                    <p><strong>Annual:</strong> ₹15,000</p>
+            <!-- 1. Logo Design -->
+            <div class="service-card" data-service="Logo Design">
+                <div class="card-badge">Popular</div>
+                <div class="service-icon-box">🎨</div>
+                <h3 class="service-title">Logo Design</h3>
+                <p class="service-desc">Custom vector brand logos with source files, multiple revisions, and formats ready for print and digital.</p>
+                <ul class="service-highlights">
+                    <li>✓ High-Resolution Vector Files</li>
+                    <li>✓ Modern 3D & Flat Concepts</li>
+                    <li>✓ Social Media Ready Formats</li>
+                </ul>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-val">₹1,500</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-quote-action" data-service="Logo Design">Get Quote</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20a%20quote%20for%20Logo%20Design." target="_blank" rel="noopener" class="btn-icon-wa" title="Inquire on WhatsApp" aria-label="Inquire about Logo Design on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <a href="#contact" class="card-cta">Get Quote</a>
+            </div>
+
+            <!-- 2. Visiting Card Design -->
+            <div class="service-card" data-service="Visiting Card Design">
+                <div class="service-icon-box">🏷️</div>
+                <h3 class="service-title">Visiting Card Design</h3>
+                <p class="service-desc">Eye-catching print-ready visiting cards (single/double sided) with QR code integration and premium styling.</p>
+                <ul class="service-highlights">
+                    <li>✓ CMYK 300 DPI Print Ready</li>
+                    <li>✓ Dynamic QR Code for Contact</li>
+                    <li>✓ Luxury Matte & Glossy Layouts</li>
+                </ul>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-val">₹500</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-quote-action" data-service="Visiting Card Design">Get Quote</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20a%20quote%20for%20Visiting%20Card%20Design." target="_blank" rel="noopener" class="btn-icon-wa" aria-label="Inquire about Visiting Card on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. NFC / Digital Smart Card -->
+            <div class="service-card" data-service="NFC Digital Visiting Card">
+                <div class="card-badge highlight-badge">Trending</div>
+                <div class="service-icon-box">📱</div>
+                <h3 class="service-title">NFC Smart Card</h3>
+                <p class="service-desc">Next-generation contactless smart card with customized micro-landing page. Tap phone to instantly exchange contacts.</p>
+                <ul class="service-highlights">
+                    <li>✓ Tap & Share on Android & iPhone</li>
+                    <li>✓ Custom Digital Bio / Link Hub</li>
+                    <li>✓ No App Download Required</li>
+                </ul>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-val">₹699</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-quote-action" data-service="NFC Digital Visiting Card">Get Quote</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20to%20order%20an%20NFC%20Smart%20Card." target="_blank" rel="noopener" class="btn-icon-wa" aria-label="Inquire about NFC Smart Card on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Google Business Profile Optimization (Featured) -->
+            <div class="service-card featured" data-service="Google Business Profile">
+                <div class="card-badge featured-badge">Top ROI</div>
+                <div class="service-icon-box">🏢</div>
+                <h3 class="service-title">Google Business Profile</h3>
+                <p class="service-desc">Complete local SEO setup and ranking strategy to dominate Google Maps search, generating direct calls & walk-ins.</p>
+                <div class="pricing-tiers-clean">
+                    <div class="tier-item"><span>1-Time Setup:</span> <strong>₹7,000</strong></div>
+                    <div class="tier-item"><span>Monthly SEO:</span> <strong>₹1,000/mo</strong></div>
+                    <div class="tier-item"><span>Annual Plan:</span> <strong>₹15,000</strong></div>
+                </div>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Comprehensive Plan</span>
+                        <span class="price-val">₹7,000</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-gold btn-quote-action" data-service="Google Business Profile">Claim Setup</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20Google%20Business%20Profile%20Optimization." target="_blank" rel="noopener" class="btn-icon-wa" aria-label="Inquire about Google Business Profile on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Digital Wedding Invitations -->
+            <div class="service-card" data-service="Digital Wedding Invitations">
+                <div class="service-icon-box">💐</div>
+                <h3 class="service-title">Digital Wedding Invites</h3>
+                <p class="service-desc">Elegant WhatsApp-ready digital invitations, royal PDF cards with interactive RSVP & Google Maps venue buttons, and video invites.</p>
+                <ul class="service-highlights">
+                    <li>✓ Royal Traditional & Modern Themes</li>
+                    <li>✓ Clickable Venue Navigation</li>
+                    <li>✓ Fast WhatsApp Sharing</li>
+                </ul>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-val">₹599</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-quote-action" data-service="Digital Wedding Invitations">Get Quote</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20a%20Digital%20Wedding%20Card." target="_blank" rel="noopener" class="btn-icon-wa" aria-label="Inquire about Wedding Cards on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Social Media Posters -->
+            <div class="service-card" data-service="Social Media Poster Design">
+                <div class="service-icon-box">📸</div>
+                <h3 class="service-title">Social Media Posters</h3>
+                <p class="service-desc">Engaging social media creatives for Instagram, Facebook, and festivals. Built to boost brand recognition and inquiries.</p>
+                <ul class="service-highlights">
+                    <li>✓ High-converting ad banners</li>
+                    <li>✓ Festival & promotional posts</li>
+                    <li>✓ Story, Post & Reel covers</li>
+                </ul>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-val">₹499</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-quote-action" data-service="Social Media Poster Design">Get Quote</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20Social%20Media%20Posters." target="_blank" rel="noopener" class="btn-icon-wa" aria-label="Inquire about Social Posters on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. WhatsApp Business Catalogue -->
+            <div class="service-card" data-service="WhatsApp Business Catalogue">
+                <div class="service-icon-box">💬</div>
+                <h3 class="service-title">WhatsApp Business Catalogue</h3>
+                <p class="service-desc">Turn your WhatsApp into an e-store! Professional product/service listings with descriptions, pricing & direct checkout links.</p>
+                <ul class="service-highlights">
+                    <li>✓ High-Quality Product Cards</li>
+                    <li>✓ Categories & Price Organization</li>
+                    <li>✓ Direct 1-Click Ordering</li>
+                </ul>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-val">₹999</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-quote-action" data-service="WhatsApp Business Catalogue">Get Quote</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20WhatsApp%20Catalogue%20setup." target="_blank" rel="noopener" class="btn-icon-wa" aria-label="Inquire about WhatsApp Catalogue on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Business Listing Setup -->
+            <div class="service-card" data-service="Business Listing Setup">
+                <div class="service-icon-box">📍</div>
+                <h3 class="service-title">Business Listing Setup</h3>
+                <p class="service-desc">Get your business verified and listed on high-authority directories: JustDial, IndiaMART, Sulekha, TradeIndia, and Bing.</p>
+                <ul class="service-highlights">
+                    <li>✓ High Authority Directory Citations</li>
+                    <li>✓ Complete NAP (Name/Address/Phone)</li>
+                    <li>✓ Organic Lead Inflow</li>
+                </ul>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-val">₹999</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-quote-action" data-service="Business Listing Setup">Get Quote</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20Business%20Listing%20Setup." target="_blank" rel="noopener" class="btn-icon-wa" aria-label="Inquire about Business Listing on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. QR Code Digital Menu -->
+            <div class="service-card" data-service="QR Code Digital Menu">
+                <div class="service-icon-box">🍽️</div>
+                <h3 class="service-title">QR Code Digital Menu</h3>
+                <p class="service-desc">Touchless digital menu for restaurants, cafes & retail shops. Includes hosted mobile-friendly menu + print-ready QR stands.</p>
+                <ul class="service-highlights">
+                    <li>✓ Easy-to-edit mobile menu page</li>
+                    <li>✓ High-res printable QR acrylic art</li>
+                    <li>✓ Instant loading on any smartphone</li>
+                </ul>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-val">₹2,500</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-quote-action" data-service="QR Code Digital Menu">Get Quote</button>
+                        <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20want%20a%20QR%20Code%20Digital%20Menu." target="_blank" rel="noopener" class="btn-icon-wa" aria-label="Inquire about QR Menu on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="pricing-note">
-            <p>✨ <strong>All prices are starting/reference prices.</strong> Every project is unique. Submit an inquiry for a tailored quotation.</p>
+        <div class="pricing-banner">
+            <div class="banner-icon">💡</div>
+            <div class="banner-text">
+                <strong>Need a custom package or combo discount?</strong> We craft personalized quotes based on your exact requirements, budget, and timeline.
+            </div>
+            <a href="#contact" class="btn btn-gold btn-sm">Talk to Us</a>
         </div>
     </div>
 </section>
@@ -158,50 +461,113 @@
 <section id="portfolio" class="portfolio">
     <div class="container">
         <div class="section-header">
-            <h2>Portfolio Samples</h2>
-            <p class="section-subtitle">Work across all service categories</p>
+            <span class="section-tag">Our Creative Work</span>
+            <h2>Portfolio & Project Samples</h2>
+            <p class="section-subtitle">A glimpse of the visual identities, digital assets, and campaigns we've built.</p>
+        </div>
+
+        <!-- Portfolio Filter Tabs -->
+        <div class="portfolio-tabs">
+            <button class="tab-btn active" data-filter="all">All Projects</button>
+            <button class="tab-btn" data-filter="branding">Logos & Branding</button>
+            <button class="tab-btn" data-filter="cards">Cards & Invitations</button>
+            <button class="tab-btn" data-filter="seo">SEO & Local Growth</button>
         </div>
 
         <div class="portfolio-grid">
-            <div class="portfolio-item" data-category="logo">
-                <img src="https://via.placeholder.com/300x250/f8f8f8/d4af37?text=Logo+Design" alt="Logo Design Sample 1">
-                <div class="portfolio-overlay">
-                    <p>Logo Design</p>
+            <!-- Item 1: Modern Brand Identity -->
+            <div class="portfolio-card" data-category="branding">
+                <div class="portfolio-mockup mockup-branding">
+                    <div class="mockup-content">
+                        <div class="brand-symbol">SJ</div>
+                        <span class="brand-preview-tag">Vector Minimalist Identity</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">Logo & Identity</span>
+                    <h4>Modern Minimalist Business Logo</h4>
+                    <p>Clean typography, versatile vector badge, and full brand guideline kit.</p>
                 </div>
             </div>
 
-            <div class="portfolio-item" data-category="card">
-                <img src="https://via.placeholder.com/300x250/f8f8f8/d4af37?text=Visiting+Card" alt="Visiting Card Sample">
-                <div class="portfolio-overlay">
-                    <p>Visiting Card</p>
+            <!-- Item 2: Smart NFC Card -->
+            <div class="portfolio-card" data-category="cards">
+                <div class="portfolio-mockup mockup-nfc">
+                    <div class="mockup-content">
+                        <div class="card-chip"></div>
+                        <div class="card-name">Surya Pratap Singh</div>
+                        <div class="card-meta">Tap to connect • Contactless NFC</div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">NFC & Smart Cards</span>
+                    <h4>Smart Digital Visiting Card</h4>
+                    <p>Matte black finish with gold foil and instant NFC profile sharing.</p>
                 </div>
             </div>
 
-            <div class="portfolio-item" data-category="wedding">
-                <img src="https://via.placeholder.com/300x250/f8f8f8/d4af37?text=Wedding+Card" alt="Wedding Invitation Sample">
-                <div class="portfolio-overlay">
-                    <p>Wedding Invitation</p>
+            <!-- Item 3: Digital Wedding Card -->
+            <div class="portfolio-card" data-category="cards">
+                <div class="portfolio-mockup mockup-wedding">
+                    <div class="mockup-content">
+                        <div class="wedding-symbol">💍</div>
+                        <div class="wedding-title">Royal Wedding Invitation</div>
+                        <div class="wedding-meta">Interactive RSVP + GPS Route</div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">Digital Invitations</span>
+                    <h4>Royal WhatsApp Wedding Invite</h4>
+                    <p>Animated celebration card with direct venue Google Maps integration.</p>
                 </div>
             </div>
 
-            <div class="portfolio-item" data-category="social">
-                <img src="https://via.placeholder.com/300x250/f8f8f8/d4af37?text=Social+Media" alt="Social Media Post">
-                <div class="portfolio-overlay">
-                    <p>Social Media Design</p>
+            <!-- Item 4: Google Maps & Local SEO -->
+            <div class="portfolio-card" data-category="seo">
+                <div class="portfolio-mockup mockup-seo">
+                    <div class="mockup-content">
+                        <div class="map-badge">📍 Top #1 Local Rank</div>
+                        <div class="reviews-badge">★★★★★ 4.9 (120+ Reviews)</div>
+                        <div class="growth-stat">+340% Customer Calls</div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">Local SEO</span>
+                    <h4>Google Business Profile Domination</h4>
+                    <p>Profile verification, geo-tagged keywords, and review acceleration.</p>
                 </div>
             </div>
 
-            <div class="portfolio-item" data-category="logo">
-                <img src="https://via.placeholder.com/300x250/f8f8f8/d4af37?text=Logo+Design+2" alt="Logo Design Sample 2">
-                <div class="portfolio-overlay">
-                    <p>Logo Design</p>
+            <!-- Item 5: Social Media Campaign -->
+            <div class="portfolio-card" data-category="branding">
+                <div class="portfolio-mockup mockup-social">
+                    <div class="mockup-content">
+                        <div class="social-icon">📸</div>
+                        <div class="social-headline">High-CTR Ad Creative</div>
+                        <div class="social-badge">Designed for Conversions</div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">Social Media Design</span>
+                    <h4>Festival & High-Impact Ad Creatives</h4>
+                    <p>Engaging Instagram carousel and banner series for retail stores.</p>
                 </div>
             </div>
 
-            <div class="portfolio-item" data-category="social">
-                <img src="https://via.placeholder.com/300x250/f8f8f8/d4af37?text=Social+Post+2" alt="Social Media Post 2">
-                <div class="portfolio-overlay">
-                    <p>Social Media Design</p>
+            <!-- Item 6: QR Code Restaurant Menu -->
+            <div class="portfolio-card" data-category="seo">
+                <div class="portfolio-mockup mockup-menu">
+                    <div class="mockup-content">
+                        <div class="qr-box">
+                            <div class="qr-mockup-pattern"></div>
+                        </div>
+                        <div class="menu-label">Scan for Interactive Menu</div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <span class="portfolio-category">Digital Hospitality</span>
+                    <h4>Contactless QR Restaurant Menu</h4>
+                    <p>High-speed mobile menu with food category filters and price list.</p>
                 </div>
             </div>
         </div>
@@ -211,71 +577,208 @@
 <!-- About Section -->
 <section id="about" class="about">
     <div class="container">
-        <div class="section-header">
-            <h2>Why Choose Us</h2>
-        </div>
-        
-        <div class="about-content">
-            <p>At SJ Digitals Co., we transform how local businesses show up online. Whether you need a striking logo, an optimized Google Business Profile, eye-catching social media designs, or digital invitations that make an impression—we've got you covered.</p>
-            
-            <p>We understand that every business is unique, and so is your brand story. Our mission is simple: give your business a professional digital identity that turns browsers into customers. From wedding cards to QR menus, business listings to brand design, we handle the digital side so you can focus on what you do best.</p>
+        <div class="about-grid">
+            <div class="about-text-col">
+                <div class="section-header align-left">
+                    <span class="section-tag">Why SJ Digitals</span>
+                    <h2>Empowering Local Businesses with Professional Digital Presence</h2>
+                </div>
+                <p class="about-lead">
+                    At <strong>SJ Digitals Co. (Surya Jyoti Enterprises)</strong>, we bridge the gap between local enterprise and modern digital excellence.
+                </p>
+                <p class="about-desc">
+                    Whether you are an established shop in Gaya, a startup entering the market, or an individual planning a grand wedding celebration—our mission is to give you digital assets that stand out, build immense credibility, and convert viewers into loyal clients.
+                </p>
+                <p class="about-desc">
+                    We manage the end-to-end design, technical setup, local SEO citations, and marketing material so you can focus 100% on serving your customers.
+                </p>
 
-            <div class="features">
-                <div class="feature">
-                    <h4>✓ Custom Solutions</h4>
-                    <p>Tailored to your specific business needs</p>
+                <div class="about-checklist">
+                    <div class="check-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Transparent Pricing:</strong> No hidden costs, no surprise renewals.
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Instant Direct Communication:</strong> Direct WhatsApp and phone support.
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Rapid Delivery:</strong> Most design projects completed in 24-48 hours.
+                        </div>
+                    </div>
                 </div>
-                <div class="feature">
-                    <h4>✓ Fast Turnaround</h4>
-                    <p>Quality work, delivered on time</p>
+            </div>
+
+            <div class="about-cards-col">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <div class="value-content">
+                        <h4>100% Custom Solutions</h4>
+                        <p>Every brand has a unique story. We craft designs tailored specifically to your target demographic.</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <h4>✓ Affordable Pricing</h4>
-                    <p>Professional services within your budget</p>
+
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <div class="value-content">
+                        <h4>Fast & Reliable Turnaround</h4>
+                        <p>We respect your time. High quality delivered reliably without delays or excuses.</p>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <div class="value-content">
+                        <h4>Budget-Friendly Packages</h4>
+                        <p>High-end corporate aesthetics at prices small businesses and entrepreneurs can easily afford.</p>
+                    </div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">📍</div>
+                    <div class="value-content">
+                        <h4>Local Market Expertise</h4>
+                        <p>Deep understanding of Indian local search patterns, regional directories, and WhatsApp commerce.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact & Instant Quote Generator Section -->
 <section id="contact" class="contact">
     <div class="container">
         <div class="section-header">
-            <h2>Get Your Quote</h2>
-            <p class="section-subtitle">Fill the form below—we'll reach out within 24 hours</p>
+            <span class="section-tag">Get in Touch</span>
+            <h2>Request a Quote / Instant Inquiry</h2>
+            <p class="section-subtitle">Fill out the quick form below. You can send it directly to our WhatsApp or submit it online for an instant response.</p>
         </div>
 
-        <div class="contact-wrapper">
-            <div class="contact-form-area">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScBqwYpi6tjWyIzj47ED4OcwTo_guy7jQH3QyaVV3uwc0LNCQ/viewform?embedded=true" width="700" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div class="contact-layout">
+            <!-- Interactive Inquiry Form -->
+            <div class="contact-form-card">
+                <div class="form-header">
+                    <h3>⚡ Fast Quotation Form</h3>
+                    <p>Tell us what you need and receive an instant reply.</p>
+                </div>
+
+                <form id="inquiryForm" class="inquiry-form" action="https://formsubmit.co/suryapratapsingh420786@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration for Email Notifications -->
+                    <input type="hidden" name="_subject" value="🔔 New SJ Digitals Website Lead/Query!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Your Full Name <span class="req">*</span></label>
+                            <input type="text" id="fullName" name="Name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNum">Phone / WhatsApp Number <span class="req">*</span></label>
+                            <input type="tel" id="phoneNum" name="Phone" class="form-control" placeholder="+91 98765 43210" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emailAddr">Email Address</label>
+                            <input type="email" id="emailAddr" name="Email" class="form-control" placeholder="rahul@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceSelect">Service Required <span class="req">*</span></label>
+                            <select id="serviceSelect" name="Service" class="form-control" required>
+                                <option value="" disabled selected>-- Select a Service --</option>
+                                <option value="Logo Design">🎨 Logo Design (From ₹1,500)</option>
+                                <option value="Visiting Card Design">🏷️ Visiting Card Design (From ₹500)</option>
+                                <option value="NFC Digital Visiting Card">📱 NFC Smart Card (From ₹699)</option>
+                                <option value="Google Business Profile">🏢 Google Business Profile Setup / SEO (₹7,000)</option>
+                                <option value="Digital Wedding Invitations">💐 Digital Wedding Invitations (From ₹599)</option>
+                                <option value="Social Media Poster Design">📸 Social Media Poster Design (From ₹499)</option>
+                                <option value="WhatsApp Business Catalogue">💬 WhatsApp Business Catalogue (From ₹999)</option>
+                                <option value="Business Listing Setup">📍 Business Listing Setup (From ₹999)</option>
+                                <option value="QR Code Digital Menu">🍽️ QR Code Digital Menu (From ₹2,500)</option>
+                                <option value="Custom Combo Package">📦 Custom Combo / Other Services</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectDetails">Project Details & Requirements</label>
+                        <textarea id="projectDetails" name="Project_Details" class="form-control" rows="3" placeholder="Describe your business, design preferences, timeline or any questions..."></textarea>
+                    </div>
+
+                    <!-- Dual Action Buttons -->
+                    <div class="form-actions-dual">
+                        <button type="button" id="btnSendWhatsApp" class="btn btn-whatsapp btn-block">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                            <span>Send Query via WhatsApp (Instant)</span>
+                        </button>
+                        <button type="submit" id="btnSubmitOnline" class="btn btn-gold btn-block">
+                            <span>Submit Query & Email Notification</span>
+                        </button>
+                    </div>
+
+                    <div id="formStatusMessage" class="form-status-msg" style="display: none;"></div>
+                </form>
             </div>
 
-            <div class="contact-info">
-                <h3>Or reach us directly</h3>
-                
-                <div class="contact-item">
-                    <h4>📞 Phone</h4>
-                    <a href="tel:+917004185301">+91 7004185301</a>
+            <!-- Direct Contact Information -->
+            <div class="contact-info-panel">
+                <div class="info-card-header">
+                    <h3>Direct Contact</h3>
+                    <p>Connect with Surya Pratap Singh directly for instant consultation.</p>
                 </div>
 
-                <div class="contact-item">
-                    <h4>💬 WhatsApp</h4>
-                    <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%20Co.%20I%27m%20interested%20in%20your%20services" target="_blank">Message us</a>
+                <div class="direct-contact-list">
+                    <a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener" class="contact-channel-item wa-channel">
+                        <div class="channel-icon">💬</div>
+                        <div class="channel-details">
+                            <span class="channel-title">WhatsApp Chat</span>
+                            <span class="channel-val">+91 7004185301</span>
+                            <span class="channel-note">Fastest response (Usually under 15 mins)</span>
+                        </div>
+                    </a>
+
+                    <a href="tel:+917004185301" class="contact-channel-item">
+                        <div class="channel-icon">📞</div>
+                        <div class="channel-details">
+                            <span class="channel-title">Phone Call</span>
+                            <span class="channel-val">+91 7004185301</span>
+                            <span class="channel-note">Mon-Sun: 9:00 AM - 9:00 PM IST</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:suryapratapsingh420786@gmail.com" class="contact-channel-item">
+                        <div class="channel-icon">📧</div>
+                        <div class="channel-details">
+                            <span class="channel-title">Official Email</span>
+                            <span class="channel-val">suryapratapsingh420786@gmail.com</span>
+                            <span class="channel-note">For formal proposals & RFPs</span>
+                        </div>
+                    </a>
+
+                    <div class="contact-channel-item static-channel">
+                        <div class="channel-icon">📍</div>
+                        <div class="channel-details">
+                            <span class="channel-title">Headquarters</span>
+                            <span class="channel-val">Gaya, Bihar, India</span>
+                            <span class="channel-note">Serving clients across India & globally</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="contact-item">
-                    <h4>📧 Email</h4>
-                    <a href="mailto:suryapratapsingh.420786@gmail.com">suryapratapsingh.420786@gmail.com</a>
-                </div>
-
-                <div class="contact-item">
-                    <h4>📍 Location</h4>
-                    <p>Gaya, Bihar, India</p>
-                </div>
-
-                <div class="pricing-disclaimer">
-                    <p><small>💡 <strong>Note:</strong> All prices shown are starting/reference prices. We provide custom quotes based on your specific requirements, timeline, and budget.</small></p>
+                <div class="guarantee-box">
+                    <div class="guarantee-icon">🛡️</div>
+                    <div class="guarantee-text">
+                        <strong>100% Satisfaction Guarantee:</strong> We work collaboratively on revisions until your brand vision is fully achieved.
+                    </div>
                 </div>
             </div>
         </div>
@@ -285,33 +788,80 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>SJ Digitals Co.</h4>
-                <p>Your Digital Presence, Perfected</p>
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <span class="footer-logo-mark">SJ</span>
+                    <span class="footer-logo-text">SJ Digitals Co.</span>
+                </div>
+                <p class="footer-desc">
+                    Your trusted digital growth and design partner. Creating high-impact visual identities, digital smart cards, and local search visibility for modern enterprises.
+                </p>
+                <div class="footer-parent-org">
+                    Legal Entity: <strong>Surya Jyoti Enterprises</strong>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Logo & Brand Design</a></li>
+                    <li><a href="#services">NFC Smart Visiting Cards</a></li>
+                    <li><a href="#services">Google Business Profile SEO</a></li>
+                    <li><a href="#services">WhatsApp Product Catalogues</a></li>
+                    <li><a href="#services">Digital Wedding Invitations</a></li>
+                    <li><a href="#services">Business Directory Listings</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <ul>
-                    <li><a href="https://github.com/killindodo" target="_blank">GitHub</a></li>
-                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services & Pricing</a></li>
+                    <li><a href="#portfolio">Project Portfolio</a></li>
+                    <li><a href="#about">About Surya Jyoti</a></li>
+                    <li><a href="#contact">Get Free Quote</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Connect With Us</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <span>📞</span>
+                        <a href="tel:+917004185301">+91 7004185301</a>
+                    </li>
+                    <li>
+                        <span>💬</span>
+                        <a href="https://wa.me/917004185301" target="_blank" rel="noopener">WhatsApp Support</a>
+                    </li>
+                    <li>
+                        <span>📧</span>
+                        <a href="mailto:suryapratapsingh420786@gmail.com">suryapratapsingh420786@gmail.com</a>
+                    </li>
+                    <li>
+                        <span>💻</span>
+                        <a href="https://github.com/killindodo" target="_blank" rel="noopener">GitHub: @killindodo</a>
+                    </li>
                 </ul>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 SJ Digitals Co. All rights reserved. | Legal Entity: Surya Jyoti Enterprises</p>
+            <p>&copy; 2026 SJ Digitals Co. (Surya Jyoti Enterprises). All rights reserved.</p>
+            <p class="footer-credits">Designed for maximum conversions, accessibility & speed.</p>
         </div>
     </div>
 </footer>
+
+<!-- Floating WhatsApp Action Widget -->
+<a href="https://wa.me/917004185301?text=Hi%20SJ%20Digitals%2C%20I%20have%20an%20inquiry%20regarding%20your%20services." target="_blank" rel="noopener" class="floating-wa" id="floatingWA" aria-label="Chat on WhatsApp">
+    <div class="floating-wa-tooltip">Chat with us on WhatsApp</div>
+    <div class="floating-wa-btn">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </div>
+</a>
 
 <!-- Main Script -->
 <script src="script.js"></script>
