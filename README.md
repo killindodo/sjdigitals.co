@@ -1,2 +1,2 @@
 # sjdigitals.co
-sjdigitals.netlify.app
+sjdigitals.vercel.app

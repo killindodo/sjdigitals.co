@@ -1,10 +1,144 @@
+/**
+ * Surya Pratap // Retro Cyber Console v2.6
+ * Matrix Rain Engine, Skills Telemetry HUD & Folding Console Drawers
+ */
+
 document.addEventListener("DOMContentLoaded", () => {
 
     /* -------------------------------------------------------------
-       1. RETRO TYPING COMMAND LINE ENGINE
+       1. AUTHENTIC MATRIX DIGITAL RAIN ENGINE (CANVAS 60FPS)
+       ------------------------------------------------------------- */
+    function initMatrixRain() {
+        const canvas = document.getElementById("matrix-canvas");
+        if (!canvas) return;
+
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        let width, height, columns, drops, speeds, dropLengths;
+        
+        // Authentic Matrix glyph set: Half-width Katakana, Hexadecimal, Binary, Math & Cyber symbols
+        const matrixChars = "0123456789ABCDEFｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾗﾘﾜλπΣΩµ⚡🦤SP01";
+        const charArray = matrixChars.split("");
+        const fontSize = 16;
+
+        function resize() {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            width = canvas.width = window.innerWidth * dpr;
+            height = canvas.height = window.innerHeight * dpr;
+            canvas.style.width = window.innerWidth + "px";
+            canvas.style.height = window.innerHeight + "px";
+            ctx.scale(dpr, dpr);
+
+            const displayWidth = window.innerWidth;
+            const displayHeight = window.innerHeight;
+            columns = Math.ceil(displayWidth / fontSize);
+            drops = [];
+            speeds = [];
+
+            for (let i = 0; i < columns; i++) {
+                // Initialize across the ENTIRE viewport height so rain is immediately active everywhere
+                drops[i] = Math.floor(Math.random() * (displayHeight / fontSize));
+                speeds[i] = 1 + Math.random() * 0.8;
+            }
+
+            // Fill solid black on init/resize
+            ctx.fillStyle = "#03060c";
+            ctx.fillRect(0, 0, displayWidth, displayHeight);
+        }
+
+        resize();
+        window.addEventListener("resize", debounce(resize, 100));
+
+        let isVisible = true;
+        document.addEventListener("visibilitychange", () => {
+            isVisible = document.visibilityState === "visible";
+        });
+
+        // Respect system accessibility setting
+        const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion) {
+            ctx.fillStyle = "#03060c";
+            ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+            return;
+        }
+
+        let lastTime = 0;
+        const fps = 33; // 30-33 FPS provides smooth flow with low CPU consumption
+        const fpsInterval = 1000 / fps;
+
+        function renderStream(timestamp) {
+            requestAnimationFrame(renderStream);
+
+            if (!isVisible) return;
+
+            const elapsed = timestamp - lastTime;
+            if (elapsed < fpsInterval) return;
+            lastTime = timestamp - (elapsed % fpsInterval);
+
+            const displayWidth = window.innerWidth;
+            const displayHeight = window.innerHeight;
+
+            // Trailing darkness fade layer
+            ctx.fillStyle = "rgba(3, 6, 12, 0.15)";
+            ctx.fillRect(0, 0, displayWidth, displayHeight);
+
+            ctx.font = `bold ${fontSize}px 'Fira Code', monospace`;
+
+            for (let i = 0; i < columns; i++) {
+                const char = charArray[Math.floor(Math.random() * charArray.length)];
+                const x = i * fontSize;
+                const y = drops[i] * fontSize;
+
+                // 1. Leading sparkler head (bright glowing white/lime)
+                if (Math.random() > 0.85) {
+                    ctx.fillStyle = "#FFFFFF";
+                    ctx.shadowColor = "#00FF66";
+                    ctx.shadowBlur = 10;
+                } else if (i % 4 === 0) {
+                    // Cyber Cyan accent column
+                    ctx.fillStyle = "#00F2FE";
+                    ctx.shadowColor = "rgba(0, 242, 254, 0.6)";
+                    ctx.shadowBlur = 6;
+                } else {
+                    // Classic Matrix Phosphor Green
+                    ctx.fillStyle = "#00FF41";
+                    ctx.shadowColor = "rgba(0, 255, 65, 0.5)";
+                    ctx.shadowBlur = 4;
+                }
+
+                ctx.fillText(char, x, y);
+                ctx.shadowBlur = 0;
+
+                // Reset drop when past bottom
+                if (y > displayHeight && Math.random() > 0.975) {
+                    drops[i] = 0;
+                    speeds[i] = 1 + Math.random() * 0.8;
+                }
+
+                drops[i] += speeds[i];
+            }
+        }
+
+        requestAnimationFrame(renderStream);
+    }
+
+    function debounce(func, wait) {
+        let timeout;
+        return function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, arguments), wait);
+        };
+    }
+
+    initMatrixRain();
+
+    /* -------------------------------------------------------------
+       2. RETRO TYPING COMMAND LINE ENGINE
        ------------------------------------------------------------- */
     const roles = [
         "Data Engineer & PySpark Lakehouse Specialist.",
+        "Founder & Tech Lead @ SJ Digitals Co.",
         "ESP32 & CC1101 Sub-GHz RF Transceiver Builder.",
         "Linux Kernel 4.x/6.x & Android GKI v4 Developer."
     ];
@@ -45,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     runTypingLoop();
 
     /* -------------------------------------------------------------
-       2. INTERACTIVE DYNAMIC SKILLS GRAPH ENGINE
+       3. INTERACTIVE DYNAMIC SKILLS GRAPH ENGINE
        ------------------------------------------------------------- */
     const skillsData = {
         data: [
@@ -83,10 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const dataset = skillsData[domainKey];
         if (!dataset || !graphContainer) return;
 
-        // Clear existing bars
         graphContainer.innerHTML = "";
 
-        // Build bars dynamically
         dataset.forEach(item => {
             const itemRow = document.createElement("div");
             itemRow.className = "graph-item";
@@ -102,7 +234,6 @@ document.addEventListener("DOMContentLoaded", () => {
             graphContainer.appendChild(itemRow);
         });
 
-        // Trigger smooth fill animation
         setTimeout(() => {
             const fills = graphContainer.querySelectorAll(".bar-fill");
             fills.forEach(fill => {
@@ -112,7 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 50);
     }
 
-    // Tab switcher events
     hudTabs.forEach(tab => {
         tab.addEventListener("click", () => {
             hudTabs.forEach(t => t.classList.remove("active"));
@@ -124,11 +254,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Initial render on data domain
     renderDomainGraph("data");
 
     /* -------------------------------------------------------------
-       3. INTERACTIVE FOLDING PROJECT ACCORDION
+       4. INTERACTIVE FOLDING PROJECT ACCORDION
        ------------------------------------------------------------- */
     const drawers = document.querySelectorAll(".project-console-drawer");
 
@@ -153,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* -------------------------------------------------------------
-       4. 1-CLICK TERMINAL COMMAND COPIER
+       5. 1-CLICK TERMINAL COMMAND COPIER
        ------------------------------------------------------------- */
     const copyButtons = document.querySelectorAll(".copy-cmd-btn");
 
@@ -177,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* -------------------------------------------------------------
-       5. CLIENT-SIDE CATEGORY FILTERING
+       6. CLIENT-SIDE CATEGORY FILTERING
        ------------------------------------------------------------- */
     const filterButtons = document.querySelectorAll(".filter-btn");
 
@@ -198,110 +327,5 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-
-    /* -------------------------------------------------------------
-       6. HIGH-PERFORMANCE MATRIX CODE STREAM ENGINE
-       ------------------------------------------------------------- */
-    function initMatrixRain() {
-        const canvas = document.getElementById("matrix-canvas");
-        if (!canvas) return;
-
-        const ctx = canvas.getContext("2d");
-        if (!ctx) return;
-
-        let width, height, columns, drops, speeds;
-        const characters = "0123456789ABCDEFｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾗﾘﾜλπΣΩµ⚡🦤SP";
-        const charArray = characters.split("");
-        const fontSize = 14;
-
-        function resizeCanvas() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-            columns = Math.floor(width / fontSize);
-            drops = [];
-            speeds = [];
-
-            for (let i = 0; i < columns; i++) {
-                // Staggered initial heights for natural rain flow
-                drops[i] = Math.floor(Math.random() * -100);
-                speeds[i] = 1 + Math.random() * 0.8;
-            }
-        }
-
-        resizeCanvas();
-        window.addEventListener("resize", debounce(resizeCanvas, 150));
-
-        let isVisible = true;
-        document.addEventListener("visibilitychange", () => {
-            isVisible = document.visibilityState === "visible";
-        });
-
-        // Respect reduced motion settings
-        const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (prefersReducedMotion) return;
-
-        let lastTime = 0;
-        const fps = 30; // 30 FPS provides buttery motion with minimal battery/CPU overhead
-        const fpsInterval = 1000 / fps;
-
-        function renderMatrix(timestamp) {
-            requestAnimationFrame(renderMatrix);
-
-            if (!isVisible) return;
-
-            const elapsed = timestamp - lastTime;
-            if (elapsed < fpsInterval) return;
-            lastTime = timestamp - (elapsed % fpsInterval);
-
-            // Transparent dark trail fill
-            ctx.fillStyle = "rgba(3, 6, 12, 0.12)";
-            ctx.fillRect(0, 0, width, height);
-
-            ctx.font = `${fontSize}px 'Fira Code', monospace`;
-
-            for (let i = 0; i < columns; i++) {
-                const text = charArray[Math.floor(Math.random() * charArray.length)];
-                const x = i * fontSize;
-                const y = drops[i] * fontSize;
-
-                // Leading sparkler characters glow brighter
-                if (Math.random() > 0.88) {
-                    ctx.fillStyle = "#FFFFFF";
-                    ctx.shadowColor = "#00F2FE";
-                    ctx.shadowBlur = 8;
-                } else if (i % 3 === 0) {
-                    ctx.fillStyle = "#00F2FE"; // Cyber Cyan
-                    ctx.shadowColor = "rgba(0, 242, 254, 0.45)";
-                    ctx.shadowBlur = 4;
-                } else {
-                    ctx.fillStyle = "#05FFA1"; // Cyber Emerald
-                    ctx.shadowColor = "rgba(5, 255, 161, 0.45)";
-                    ctx.shadowBlur = 3;
-                }
-
-                ctx.fillText(text, x, y);
-                ctx.shadowBlur = 0;
-
-                // Reset drop when exceeding screen bottom
-                if (y > height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-
-                drops[i] += speeds[i];
-            }
-        }
-
-        requestAnimationFrame(renderMatrix);
-    }
-
-    function debounce(func, wait) {
-        let timeout;
-        return function() {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => func.apply(this, arguments), wait);
-        };
-    }
-
-    initMatrixRain();
 
 });

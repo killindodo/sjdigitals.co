@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Surya Pratap | Systems, Embedded & Data Engineer">
+    <meta name="description" content="Surya Pratap | Systems, Embedded & Data Engineer | Founder of SJ Digitals Co.">
     <title>Surya Pratap // Retro Cyber Console</title>
     
     <!-- Fonts -->
@@ -17,12 +17,11 @@
 </head>
 <body>
 
-    <!-- Ambient Glowing Blurs, Matrix Stream & CRT Mesh -->
+    <!-- Fullscreen Matrix Digital Rain Background Canvas -->
+    <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
+
+    <!-- Ambient CRT Scanline Overlay -->
     <div class="retro-bg" aria-hidden="true">
-        <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
-        <div class="glow-orb orb-emerald"></div>
-        <div class="glow-orb orb-cyan"></div>
-        <div class="glow-orb orb-amber"></div>
         <div class="scanlines"></div>
         <div class="dot-grid"></div>
     </div>
@@ -34,14 +33,21 @@
                 <span class="pulse-beacon"></span>
                 <span class="nav-title">SP://CONSOLE_v2.6</span>
             </div>
+            
             <div class="nav-links">
-                <a href="../" class="nav-item" title="Visit SJ Digitals Agency">[00_SJ_DIGITALS]</a>
                 <a href="#about" class="nav-item">[01_ABOUT]</a>
                 <a href="#skills" class="nav-item">[02_SKILLS_HUD]</a>
                 <a href="#projects" class="nav-item">[03_PROJECTS]</a>
                 <a href="#experience" class="nav-item">[04_EXP]</a>
             </div>
-            <a href="#contact" class="nav-action-btn"><i class="fas fa-terminal"></i> TRANSMIT</a>
+
+            <div class="nav-right-actions">
+                <a href="https://sjdigitals.vercel.app/" class="nav-agency-btn" title="Visit SJ Digitals Co. Agency">
+                    <span class="gold-pulse-dot"></span>
+                    <span>SJ DIGITALS ↗</span>
+                </a>
+                <a href="#contact" class="nav-action-btn"><i class="fas fa-terminal"></i> TRANSMIT</a>
+            </div>
         </nav>
     </header>
 
@@ -56,7 +62,13 @@
 
             <div class="hero-content">
                 <div class="hero-text-block">
-                    <span class="retro-badge">SYSTEMS & DATA ARCHITECT</span>
+                    <div class="hero-tag-row">
+                        <span class="retro-badge">SYSTEMS & DATA ARCHITECT</span>
+                        <a href="https://sjdigitals.vercel.app/" class="agency-pill-badge" target="_blank" title="Visit Agency Site">
+                            <i class="fas fa-globe"></i> SJ Digitals Co. ↗
+                        </a>
+                    </div>
+                    
                     <h1 class="hero-name">SURYA PRATAP</h1>
                     
                     <div class="cli-prompt-line">
@@ -66,18 +78,24 @@
                     </div>
 
                     <p class="hero-bio">
-                        Engineering robust <strong>Enterprise Lakehouses (PySpark/Databricks)</strong>, custom <strong>Sub-GHz RF Microcontrollers</strong>, and low-level <strong>Android GKI / Linux Kernel Drivers</strong>.
+                        Engineering robust <strong>Enterprise Lakehouses (PySpark/Databricks)</strong>, custom <strong>Sub-GHz RF Microcontrollers</strong>, and low-level <strong>Android GKI / Linux Kernel Drivers</strong>. Founder of <a href="https://sjdigitals.vercel.app/" class="text-link-gold" target="_blank">SJ Digitals Co.</a>
                     </p>
 
                     <div class="hero-actions">
                         <a href="#projects" class="cyber-btn btn-primary"><i class="fas fa-microchip"></i> EXECUTE_PROJECTS</a>
-                        <a href="mailto:suryapratapsingh420786@gmail.com" class="cyber-btn btn-glass"><i class="fas fa-envelope"></i> SEND_DISPATCH</a>
+                        <a href="https://sjdigitals.vercel.app/" class="cyber-btn btn-gold-agency" target="_blank"><i class="fas fa-globe"></i> VISIT SJ DIGITALS CO. ↗</a>
+                        <a href="mailto:suryapratapsingh420786@gmail.com" class="cyber-btn btn-glass"><i class="fas fa-envelope"></i> DISPATCH</a>
                     </div>
                 </div>
 
                 <!-- Telemetry Glass Box -->
                 <div class="telemetry-box">
                     <div class="telemetry-header">SYSTEM_METRICS</div>
+                    
+                    <div class="telemetry-row highlight-telemetry">
+                        <span>DIGITAL AGENCY</span>
+                        <a href="https://sjdigitals.vercel.app/" class="text-gold-glow" target="_blank">SJ DIGITALS CO. ↗</a>
+                    </div>
                     <div class="telemetry-row">
                         <span>DATA PIPELINES</span>
                         <strong class="text-cyan">MEDALLION</strong>
@@ -93,6 +111,7 @@
                     <div class="telemetry-socials">
                         <a href="https://www.github.com/killindodo" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/surya-pratap-270b35153/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/917004185301" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="tel:+917004185301" title="Direct Phone"><i class="fas fa-phone"></i></a>
                     </div>
                 </div>
@@ -298,12 +317,18 @@
                 <span class="bar-tag"><i class="fas fa-briefcase"></i> MODULE://TRACK_RECORD</span>
                 <span class="bar-meta">LEADERSHIP_LOGS</span>
             </div>
-            <div class="exp-console-row">
-                <div class="exp-timeline-badge">[2021 // 2025]</div>
+            
+            <div class="exp-console-row highlight-exp">
+                <div class="exp-timeline-badge">[2021 // 2026]</div>
                 <div class="exp-details">
-                    <h3>Proprietor &amp; Technical Lead</h3>
-                    <h4>Surya Jyoti Enterprises</h4>
-                    <p>Supervised operations, commercial supply logistics, and tender fulfillment for Government contract projects, managing vendor coordination and technical execution end-to-end.</p>
+                    <h3>Proprietor &amp; Lead Systems Architect</h3>
+                    <h4>Surya Jyoti Enterprises &amp; <a href="https://sjdigitals.vercel.app/" class="text-link-gold" target="_blank">SJ Digitals Co.</a></h4>
+                    <p>Directing digital infrastructure, local search optimization, and commercial hardware/software solutions. Spearheading brand identities, smart NFC cards, and cloud data architecture.</p>
+                    <div class="exp-agency-action">
+                        <a href="https://sjdigitals.vercel.app/" class="cyber-btn btn-gold-agency" target="_blank">
+                            <i class="fas fa-globe"></i> EXPLORE SJ DIGITALS CO. AGENCY ↗
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -317,14 +342,17 @@
             <div class="contact-inner">
                 <h2>INITIATE DIRECT DISPATCH</h2>
                 <p>Open for Data Engineering roles, Embedded Sub-GHz/Hardware development, and low-level Linux Kernel engineering.</p>
-                <a href="mailto:suryapratapsingh420786@gmail.com" class="cyber-btn btn-primary pulse-action">
-                    <i class="fas fa-envelope"></i> suryapratapsingh420786@gmail.com
-                </a>
+                <div class="contact-actions-row">
+                    <a href="mailto:suryapratapsingh420786@gmail.com" class="cyber-btn btn-primary pulse-action">
+                        <i class="fas fa-envelope"></i> suryapratapsingh420786@gmail.com
+                    </a>
+                </div>
             </div>
         </section>
 
         <footer class="console-footer">
             <span>[ SYSTEM CORE: SURYA PRATAP ]</span>
+            <span>ECOSYSTEM: <a href="https://sjdigitals.vercel.app/" class="footer-agency-link" target="_blank">SJ DIGITALS CO. ↗</a></span>
             <span>&copy; 2026 // ALL SYSTEMS SECURE</span>
         </footer>
 
