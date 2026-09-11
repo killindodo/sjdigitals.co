@@ -684,6 +684,10 @@ body.splash-active {
     z-index: 0;
 }
 
+[data-theme="dark"] .hero::after {
+    background: radial-gradient(circle, rgba(229, 193, 88, 0.06) 0%, transparent 70%);
+}
+
 @keyframes floatGlow {
     0% { transform: translateY(0) scale(1); }
     100% { transform: translateY(-20px) scale(1.06); }
@@ -755,14 +759,16 @@ body.splash-active {
 }
 
 [data-theme="dark"] .hero-brand-banner {
-    background: radial-gradient(circle at center, rgba(26, 36, 52, 0.85) 0%, rgba(13, 19, 30, 0.95) 100%);
-    border-color: rgba(229, 193, 88, 0.4);
-    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 35px rgba(229, 193, 88, 0.18);
-    padding: 2.2rem 2rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem 0 1rem;
+    overflow: visible;
 }
 
 [data-theme="dark"] .hero-brand-banner:hover {
-    box-shadow: 0 25px 60px -8px rgba(229, 193, 88, 0.35), 0 0 45px rgba(212, 175, 55, 0.22), 0 12px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: none;
+    transform: translateY(-4px);
 }
 
 /* Light / Dark Mode Hero Logo Toggle */
@@ -2365,7 +2371,7 @@ textarea.form-control {
     }
 
     [data-theme="dark"] .hero-brand-banner {
-        padding: 1.5rem 1rem;
+        padding: 0.25rem 0;
     }
 
     .hero-title {
