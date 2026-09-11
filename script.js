@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initServiceQuoteButtons();
     initInquiryForm();
     initPortfolioFilters();
+    initWatermarkScroll();
     initSafeAnalytics();
     logPerformance();
 });
@@ -423,6 +424,39 @@ function logPerformance() {
             // Ignore performance logging errors
         }
     });
+}
+
+/* --------------------------------------------------------------------------
+   10. Watermark Scroll Visibility Controller
+   (Hidden at top hero section; fades in at 50% opacity when scrolled down)
+   -------------------------------------------------------------------------- */
+function initWatermarkScroll() {
+    const watermark = document.getElementById('siteWatermark');
+    const hero = document.getElementById('home') || document.querySelector('.hero');
+    if (!watermark) return;
+
+    let ticking = false;
+
+    function updateWatermark() {
+        const heroHeight = hero ? hero.offsetHeight : 550;
+        // Fade in after scrolling past 35% of the hero section
+        if (window.scrollY > heroHeight * 0.35) {
+            watermark.classList.add('is-visible');
+        } else {
+            watermark.classList.remove('is-visible');
+        }
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateWatermark);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Initial check on load
+    updateWatermark();
 }
 
 console.log('SJ Digitals Co. - Modern High-Converting Platform Initialized.');
