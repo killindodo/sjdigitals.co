@@ -319,6 +319,23 @@ img {
     border-color: var(--gold-primary);
 }
 
+.navbar-logo-img {
+    height: 44px;
+    width: auto;
+    max-width: 170px;
+    object-fit: contain;
+    display: block;
+    transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.navbar-brand:hover .navbar-logo-img {
+    transform: scale(1.04);
+}
+
+[data-theme="dark"] .navbar-logo-img {
+    filter: drop-shadow(0 0 8px rgba(229, 193, 88, 0.4)) brightness(1.15);
+}
+
 .logo-text {
     display: flex;
     flex-direction: column;
@@ -564,6 +581,51 @@ img {
     0% { transform: scale(0.95); opacity: 0.8; }
     50% { transform: scale(1.3); opacity: 1; }
     100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.hero-brand-banner {
+    max-width: 740px;
+    margin: 0.5rem auto 2.25rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px -12px rgba(212, 175, 55, 0.28), 0 8px 24px -6px rgba(0, 0, 0, 0.08);
+    border: 1.5px solid rgba(212, 175, 55, 0.4);
+    background: #fcf9f2;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-brand-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 55px -10px rgba(212, 175, 55, 0.38), 0 12px 28px -6px rgba(0, 0, 0, 0.14);
+}
+
+[data-theme="dark"] .hero-brand-banner {
+    background: #111722;
+    border-color: rgba(229, 193, 88, 0.45);
+    box-shadow: 0 20px 50px -10px rgba(229, 193, 88, 0.25), 0 0 35px rgba(212, 175, 55, 0.12), 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .hero-brand-banner:hover {
+    box-shadow: 0 25px 60px -8px rgba(229, 193, 88, 0.35), 0 0 45px rgba(212, 175, 55, 0.18), 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hero-brand-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4092 / 1704;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .hero-title {
@@ -2065,6 +2127,12 @@ textarea.form-control {
         padding: 0.5rem 0;
     }
 
+    .hero-brand-banner {
+        max-width: 95%;
+        margin: 0.5rem auto 1.75rem;
+        border-radius: 16px;
+    }
+
     .hero-title {
         font-size: 2.35rem;
     }
@@ -2097,8 +2165,18 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
+    .navbar-logo-img {
+        height: 38px;
+    }
+
     .hero {
         padding: 3rem 0 2.5rem;
+    }
+
+    .hero-brand-banner {
+        max-width: 100%;
+        margin: 0.25rem auto 1.5rem;
+        border-radius: 12px;
     }
 
     .hero-title {

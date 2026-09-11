@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="stylesheet" href="style.css?v=2.2">
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDH1P42PZZ"></script>
@@ -141,11 +141,10 @@
 <header class="navbar" id="navbar">
     <div class="container navbar-container">
         <a href="#home" class="navbar-brand" aria-label="SJ Digitals Co. Home">
-            <div class="logo-mark">SJ</div>
-            <div class="logo-text">
-                <span class="brand-title">SJ Digitals Co.</span>
-                <span class="brand-tagline">Surya Jyoti Enterprises</span>
-            </div>
+            <picture>
+                <source srcset="sjlogo.webp" type="image/webp">
+                <img src="sjlogo.png" alt="SJ Digitals" class="navbar-logo-img" width="800" height="333">
+            </picture>
         </a>
 
         <div class="nav-controls">
@@ -188,10 +187,15 @@
                 <span class="badge-dot"></span>
                 <span>Premium Digital & Branding Solutions</span>
             </div>
-            <h1 class="hero-title">
-                Your Digital Presence, <br>
-                <span class="gradient-text">Flawlessly Perfected.</span>
-            </h1>
+
+            <div class="hero-brand-banner">
+                <picture>
+                    <source srcset="fulllogo-with-bg.webp" type="image/webp">
+                    <img src="fulllogo-with-bg.png" alt="SJ Digitals - Your Digital Presence, Flawlessly Perfected" class="hero-brand-img" width="1600" height="666" fetchpriority="high" decoding="async">
+                </picture>
+                <h1 class="sr-only">SJ Digitals - Your Digital Presence, Flawlessly Perfected</h1>
+            </div>
+
             <p class="hero-subtitle">
                 We craft custom high-speed websites, powerful brand identities, high-ranking Google Business Profiles, smart NFC cards, and creative digital assets designed to scale your business.
             </p>
