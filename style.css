@@ -746,7 +746,7 @@ body.splash-active {
     box-shadow: 0 22px 50px -12px rgba(212, 175, 55, 0.3), 0 10px 28px -6px rgba(0, 0, 0, 0.09);
     border: 1.5px solid rgba(212, 175, 55, 0.42);
     background: #fcf9f2;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .hero-brand-banner:hover {
@@ -755,13 +755,31 @@ body.splash-active {
 }
 
 [data-theme="dark"] .hero-brand-banner {
-    background: #111722;
-    border-color: rgba(229, 193, 88, 0.45);
-    box-shadow: 0 20px 50px -10px rgba(229, 193, 88, 0.25), 0 0 35px rgba(212, 175, 55, 0.12), 0 8px 25px rgba(0, 0, 0, 0.5);
+    background: radial-gradient(circle at center, rgba(26, 36, 52, 0.85) 0%, rgba(13, 19, 30, 0.95) 100%);
+    border-color: rgba(229, 193, 88, 0.4);
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 35px rgba(229, 193, 88, 0.18);
+    padding: 2.2rem 2rem;
 }
 
 [data-theme="dark"] .hero-brand-banner:hover {
-    box-shadow: 0 25px 60px -8px rgba(229, 193, 88, 0.35), 0 0 45px rgba(212, 175, 55, 0.18), 0 12px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 25px 60px -8px rgba(229, 193, 88, 0.35), 0 0 45px rgba(212, 175, 55, 0.22), 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Light / Dark Mode Hero Logo Toggle */
+.hero-logo-light {
+    display: block;
+}
+
+.hero-logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .hero-logo-light {
+    display: none !important;
+}
+
+[data-theme="dark"] .hero-logo-dark {
+    display: block !important;
 }
 
 .hero-brand-img {
@@ -769,6 +787,12 @@ body.splash-active {
     height: auto;
     display: block;
     aspect-ratio: 4092 / 1704;
+}
+
+.hero-brand-img-dark {
+    max-width: 540px;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 20px rgba(229, 193, 88, 0.5)) brightness(1.18);
 }
 
 .sr-only {
@@ -2338,6 +2362,10 @@ textarea.form-control {
         max-width: 100%;
         margin: 0.25rem auto 1.5rem;
         border-radius: 12px;
+    }
+
+    [data-theme="dark"] .hero-brand-banner {
+        padding: 1.5rem 1rem;
     }
 
     .hero-title {
