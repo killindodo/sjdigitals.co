@@ -1397,6 +1397,135 @@ body.splash-active {
     overflow: hidden;
 }
 
+/* Video Project Sample Card */
+.mockup-video-card {
+    height: 220px;
+    position: relative;
+    background: #0B0F17;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-sample-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-sample-video {
+    transform: scale(1.04);
+}
+
+.video-overlay-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: rgba(11, 15, 23, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(229, 193, 88, 0.4);
+    border-radius: var(--radius-full);
+    color: #FCD34D;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.video-play-toggle {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.95);
+    color: #111827;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 3;
+}
+
+.video-play-toggle:hover {
+    transform: scale(1.1);
+    background: #FCD34D;
+}
+
+/* Official Brand Kit Card */
+.mockup-official-brand {
+    height: 220px;
+    background: #FCF9F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1.25rem 1.5rem;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .mockup-official-brand {
+    background: radial-gradient(circle at center, #1E293B 0%, #0F172A 100%);
+}
+
+.mockup-official-brand picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-sample-img {
+    width: 90%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 4092 / 1704;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin: auto;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .brand-sample-img {
+    transform: scale(1.04);
+}
+
+.brand-badge-pill {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(197, 155, 39, 0.35);
+    border-radius: var(--radius-full);
+    color: var(--gold-dark);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+[data-theme="dark"] .brand-badge-pill {
+    background: rgba(11, 15, 23, 0.85);
+    border-color: rgba(229, 193, 88, 0.4);
+    color: #FCD34D;
+}
+
 .mockup-branding {
     background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
     color: #FFFFFF;

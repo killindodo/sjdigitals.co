@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initServiceQuoteButtons();
     initInquiryForm();
     initPortfolioFilters();
+    initPortfolioVideos();
     initWatermarkScroll();
     initSafeAnalytics();
     logPerformance();
@@ -457,6 +458,74 @@ function initWatermarkScroll() {
 
     // Initial check on load
     updateWatermark();
+}
+
+/* --------------------------------------------------------------------------
+   11. Portfolio Video Sample Controller (Auto-loop on view & click/hover toggle)
+   -------------------------------------------------------------------------- */
+function initPortfolioVideos() {
+    const videoCards = document.querySelectorAll('.mockup-video-card');
+    if (!videoCards.length) return;
+
+    videoCards.forEach(card => {
+        const video = card.querySelector('.portfolio-sample-video');
+        const playBtn = card.querySelector('.video-play-toggle');
+        if (!video) return;
+
+        const iconPlay = playBtn ? playBtn.querySelector('.icon-play') : null;
+        const iconPause = playBtn ? playBtn.querySelector('.icon-pause') : null;
+
+        function updatePlayState(isPlaying) {
+            if (iconPlay && iconPause) {
+                iconPlay.style.display = isPlaying ? 'none' : 'block';
+                iconPause.style.display = isPlaying ? 'block' : 'none';
+            }
+        }
+
+        function togglePlay(e) {
+            if (e) e.stopPropagation();
+            if (video.paused) {
+                video.play().then(() => updatePlayState(true)).catch(() => {});
+            } else {
+                video.pause();
+                updatePlayState(false);
+            }
+        }
+
+        if (playBtn) {
+            playBtn.addEventListener('click', togglePlay);
+        }
+
+        card.addEventListener('click', function(e) {
+            if (e.target !== playBtn && !playBtn.contains(e.target)) {
+                togglePlay(e);
+            }
+        });
+
+        // Hover playback on desktop devices
+        card.addEventListener('mouseenter', function() {
+            if (window.matchMedia('(hover: hover)').matches && video.paused) {
+                video.play().then(() => updatePlayState(true)).catch(() => {});
+            }
+        });
+
+        // Autoplay when scrolled into view (muted, hardware-accelerated)
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play().then(() => updatePlayState(true)).catch(() => {});
+                    } else {
+                        if (!video.paused) {
+                            video.pause();
+                            updatePlayState(false);
+                        }
+                    }
+                });
+            }, { threshold: 0.35 });
+            observer.observe(card);
+        }
+    });
 }
 
 console.log('SJ Digitals Co. - Modern High-Converting Platform Initialized.');
