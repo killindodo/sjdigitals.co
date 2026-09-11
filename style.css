@@ -441,7 +441,9 @@ body.splash-active {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 75px;
+    min-height: 96px;
+    height: auto;
+    padding: 0.4rem 0;
 }
 
 .navbar-brand {
@@ -473,16 +475,16 @@ body.splash-active {
 }
 
 .navbar-logo-img {
-    height: 52px;
+    height: 88px;
     width: auto;
-    max-width: 195px;
+    max-width: 260px;
     object-fit: contain;
     display: block;
     transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
 .navbar-brand:hover .navbar-logo-img {
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 
 [data-theme="dark"] .navbar-logo-img {
@@ -2318,8 +2320,14 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
+    .navbar-container {
+        min-height: 80px;
+        padding: 0.35rem 0;
+    }
+
     .navbar-logo-img {
-        height: 44px;
+        height: 64px;
+        max-width: 175px;
     }
 
     .hero {
