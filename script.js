@@ -38,8 +38,8 @@ function initSplashScreen() {
         }, 600);
     }
 
-    // Dismiss after the two-blink animation completes (~1.6s)
-    const timer = setTimeout(dismissSplash, 1600);
+    // Dismiss after the single slow blink finishes (~2.4s)
+    const timer = setTimeout(dismissSplash, 2400);
 
     // Tap or click anywhere to skip immediately
     splash.addEventListener('click', function() {
