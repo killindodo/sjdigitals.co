@@ -135,7 +135,18 @@
         })();
     </script>
 </head>
-<body>
+<body class="splash-active">
+
+<!-- Brand Intro Splash Screen (Blinks twice before revealing site) -->
+<div id="splashScreen" class="splash-screen" aria-hidden="true">
+    <div class="splash-content">
+        <div class="splash-logo-glow"></div>
+        <picture>
+            <source srcset="sjlogo.webp" type="image/webp">
+            <img src="sjlogo.png" alt="SJ Digitals" class="splash-logo" width="400" height="166">
+        </picture>
+    </div>
+</div>
 
 <!-- Navigation Bar -->
 <header class="navbar" id="navbar">
@@ -1012,7 +1023,7 @@
 </a>
 
 <!-- Main Script -->
-<script src="script.js?v=2.1"></script>
+<script src="script.js?v=2.2"></script>
 
 </body>
 </html>

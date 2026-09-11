@@ -5,6 +5,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    initSplashScreen();
     initThemeToggle();
     initMobileNav();
     initSmoothScroll();
@@ -15,6 +16,37 @@ document.addEventListener('DOMContentLoaded', function() {
     initSafeAnalytics();
     logPerformance();
 });
+
+/* --------------------------------------------------------------------------
+   Splash Screen Intro Animation (Blinks twice then unveils the website)
+   -------------------------------------------------------------------------- */
+function initSplashScreen() {
+    const splash = document.getElementById('splashScreen');
+    if (!splash) return;
+
+    let dismissed = false;
+    function dismissSplash() {
+        if (dismissed) return;
+        dismissed = true;
+        splash.classList.add('splash-fade-out');
+        document.body.classList.remove('splash-active');
+
+        setTimeout(function() {
+            if (splash.parentNode) {
+                splash.remove();
+            }
+        }, 600);
+    }
+
+    // Dismiss after the two-blink animation completes (~1.6s)
+    const timer = setTimeout(dismissSplash, 1600);
+
+    // Tap or click anywhere to skip immediately
+    splash.addEventListener('click', function() {
+        clearTimeout(timer);
+        dismissSplash();
+    }, { once: true });
+}
 
 /* --------------------------------------------------------------------------
    0. Theme Toggle Engine (Light / Dark Mode with Persistence)

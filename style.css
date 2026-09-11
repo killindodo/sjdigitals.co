@@ -171,6 +171,175 @@ img {
 }
 
 /* --------------------------------------------------------------------------
+   Brand Intro Splash Screen Loader
+   -------------------------------------------------------------------------- */
+body.splash-active {
+    overflow: hidden;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: radial-gradient(circle at center, #151D2A 0%, #0B0F17 75%, #05070B 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+    transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.55s ease, transform 0.55s ease;
+    animation: splashDismissFallback 0.6s cubic-bezier(0.4, 0, 0.2, 1) 1.7s forwards;
+}
+
+.splash-screen.splash-fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(1.03);
+}
+
+.splash-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.splash-logo-glow {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(229, 193, 88, 0.5) 0%, rgba(212, 175, 55, 0.18) 50%, transparent 70%);
+    filter: blur(40px);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: splashGlowPulse 1.55s ease-in-out forwards;
+}
+
+.splash-logo {
+    position: relative;
+    z-index: 2;
+    max-width: 360px;
+    width: 80vw;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 24px rgba(229, 193, 88, 0.6)) brightness(1.12);
+    animation: splashBlinkTwice 1.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Two distinct blinks / pulses */
+@keyframes splashBlinkTwice {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    18% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    /* First Blink Off */
+    35% {
+        opacity: 0.08;
+        transform: scale(0.96);
+    }
+    /* First Blink On */
+    52% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    /* Second Blink Off */
+    69% {
+        opacity: 0.08;
+        transform: scale(0.96);
+    }
+    /* Second Blink On */
+    86% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+}
+
+@keyframes splashGlowPulse {
+    0% {
+        opacity: 0;
+        transform: scale(0.65);
+    }
+    18% {
+        opacity: 0.85;
+        transform: scale(1);
+    }
+    35% {
+        opacity: 0.1;
+        transform: scale(0.7);
+    }
+    52% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    69% {
+        opacity: 0.1;
+        transform: scale(0.7);
+    }
+    86% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+    100% {
+        opacity: 0.9;
+        transform: scale(1.4);
+    }
+}
+
+@keyframes splashDismissFallback {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    99% {
+        opacity: 0;
+        visibility: visible;
+        pointer-events: none;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .splash-logo-glow {
+        width: 220px;
+        height: 220px;
+    }
+    .splash-logo {
+        max-width: 270px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .splash-screen {
+        display: none !important;
+    }
+    body.splash-active {
+        overflow: auto !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
    Buttons & Action Styles
    -------------------------------------------------------------------------- */
 .btn {
