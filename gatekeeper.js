@@ -13,6 +13,16 @@
     const bypassParam = params.get('bypass');
     const forceTestParam = params.get('test_offline');
 
+    // Local Development Safeguard: Never lock during local offline inspection
+    const isLocal = window.location.protocol === 'file:' || 
+                    window.location.hostname === 'localhost' || 
+                    window.location.hostname === '127.0.0.1';
+
+    if (isLocal && !forceTestParam) {
+        console.info("[Gatekeeper] Local development environment detected. Bypassing gatekeeper.");
+        return;
+    }
+
     // 1. Fetch Remote Config
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 2800);

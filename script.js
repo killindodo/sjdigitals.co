@@ -275,7 +275,7 @@ ${email ? `📧 *Email:* ${email}\n` : ''}🎨 *Service:* ${selectedService}
 📝 *Project Requirements:* 
 ${notes}
 ━━━━━━━━━━━━━━━━━━
-🌐 *Source:* sjdigitals.vercel.app`;
+🌐 *Source:* suryajyoti.digital`;
 
         const waUrl = `https://wa.me/${whatsappRecipient}?text=${encodeURIComponent(waText)}`;
 

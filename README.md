@@ -1,2 +1,2 @@
-# sjdigitals.co
-sjdigitals.vercel.app
+# suryajyoti.digital
+https://www.suryajyoti.digital
